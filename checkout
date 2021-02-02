@@ -1,0 +1,71 @@
+import static com.kms.katalon.core.checkpoint.CheckpointFactory.findCheckpoint
+import static com.kms.katalon.core.testcase.TestCaseFactory.findTestCase
+import static com.kms.katalon.core.testdata.TestDataFactory.findTestData
+import static com.kms.katalon.core.testobject.ObjectRepository.findTestObject
+import static com.kms.katalon.core.testobject.ObjectRepository.findWindowsObject
+import com.kms.katalon.core.checkpoint.Checkpoint as Checkpoint
+import com.kms.katalon.core.cucumber.keyword.CucumberBuiltinKeywords as CucumberKW
+import com.kms.katalon.core.mobile.keyword.MobileBuiltInKeywords as Mobile
+import com.kms.katalon.core.model.FailureHandling as FailureHandling
+import com.kms.katalon.core.testcase.TestCase as TestCase
+import com.kms.katalon.core.testdata.TestData as TestData
+import com.kms.katalon.core.testobject.TestObject as TestObject
+import com.kms.katalon.core.webservice.keyword.WSBuiltInKeywords as WS
+import com.kms.katalon.core.webui.keyword.WebUiBuiltInKeywords as WebUI
+import com.kms.katalon.core.windows.keyword.WindowsBuiltinKeywords as Windows
+import internal.GlobalVariable as GlobalVariable
+import org.openqa.selenium.Keys as Keys
+
+WebUI.click(findTestObject('Object Repository/Page_Evermos - Katalog/span'))
+
+WebUI.click(findTestObject('Object Repository/Page_Evermos/a_Lanjut ke Checkout'))
+
+WebUI.click(findTestObject('Object Repository/Page_Evermos/span_Ganti Kurir  Isi Kode Booking (Resi Ot_10dda1'))
+
+WebUI.click(findTestObject('Object Repository/Page_Evermos/span_Rp12.000_appToggle__input appToggle__i_583697'))
+
+WebUI.click(findTestObject('Object Repository/Page_Evermos/button_Terapkan'))
+
+WebUI.setText(findTestObject('Object Repository/Page_Evermos/input_Rp17.310_inputText__input'), 'TRANSAKSIPERTAMA100')
+
+WebUI.click(findTestObject('Object Repository/Page_Evermos/button_Gunakan'))
+
+WebUI.verifyElementPresent(findTestObject('Object Repository/Page_Evermos/div_Kode Promo Tidak Ditemukan. Kode-Promo'), 
+    0)
+
+WebUI.click(findTestObject('Object Repository/Page_Evermos/button_OK'))
+
+WebUI.click(findTestObject('Object Repository/Page_Evermos/a_Lihat Promo Tersedia'))
+
+WebUI.verifyElementPresent(findTestObject('Object Repository/Page_Kupon Saya/div_Potongan Ongkir 10rb'), 0)
+
+WebUI.click(findTestObject('Object Repository/Page_Kupon Saya/a_Gunakan'))
+
+WebUI.verifyElementPresent(findTestObject('Object Repository/Page_Kupon Saya/div_Minimum transaksi adalah sebesar Rp100.000'), 
+    0)
+
+WebUI.click(findTestObject('Object Repository/Page_Kupon Saya/button_OK'))
+
+WebUI.click(findTestObject('Object Repository/Page_Evermos/a_Lihat Promo Tersedia'))
+
+WebUI.verifyElementPresent(findTestObject('Object Repository/Page_Kupon Saya/div_Potongan Ongkir 15rb'), 0)
+
+WebUI.click(findTestObject('Object Repository/Page_Kupon Saya/a_Gunakan'))
+
+WebUI.verifyElementPresent(findTestObject('Object Repository/Page_Kupon Saya/div_Kode voucher berhasil digunakan'), 0)
+
+WebUI.click(findTestObject('Object Repository/Page_Kupon Saya/button_OK'))
+
+WebUI.verifyElementPresent(findTestObject('Object Repository/Page_Evermos/div_Kode Promo berkah15 -Rp15.000'), 0)
+
+WebUI.click(findTestObject('Object Repository/Page_Evermos/a_Lanjut ke Pembayaran'))
+
+WebUI.verifyElementPresent(findTestObject('Object Repository/Page_Evermos/div_Harap periksa pesanan anda, sebelum mel_ba8678'), 
+    0)
+
+WebUI.click(findTestObject('Object Repository/Page_Evermos/button_Bayar'))
+
+WebUI.verifyElementPresent(findTestObject('Object Repository/Page_Evermos/div_jumlahRp 210,990'), 0)
+
+WebUI.closeBrowser()
+
