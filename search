@@ -1,0 +1,101 @@
+import static com.kms.katalon.core.checkpoint.CheckpointFactory.findCheckpoint
+import static com.kms.katalon.core.testcase.TestCaseFactory.findTestCase
+import static com.kms.katalon.core.testdata.TestDataFactory.findTestData
+import static com.kms.katalon.core.testobject.ObjectRepository.findTestObject
+import static com.kms.katalon.core.testobject.ObjectRepository.findWindowsObject
+import com.kms.katalon.core.checkpoint.Checkpoint as Checkpoint
+import com.kms.katalon.core.cucumber.keyword.CucumberBuiltinKeywords as CucumberKW
+import com.kms.katalon.core.mobile.keyword.MobileBuiltInKeywords as Mobile
+import com.kms.katalon.core.model.FailureHandling as FailureHandling
+import com.kms.katalon.core.testcase.TestCase as TestCase
+import com.kms.katalon.core.testdata.TestData as TestData
+import com.kms.katalon.core.testobject.TestObject as TestObject
+import com.kms.katalon.core.webservice.keyword.WSBuiltInKeywords as WS
+import com.kms.katalon.core.webui.keyword.WebUiBuiltInKeywords as WebUI
+import com.kms.katalon.core.windows.keyword.WindowsBuiltinKeywords as Windows
+import internal.GlobalVariable as GlobalVariable
+import org.openqa.selenium.Keys as Keys
+
+//1.1.1	search produk di search bar
+WebUI.verifyElementPresent(findTestObject('Object Repository/Page_Evermos - Katalog/button_search'), 4, FailureHandling.OPTIONAL)
+
+WebUI.click(findTestObject('Object Repository/Page_Evermos - Katalog/input_search'))
+
+WebUI.setText(findTestObject('Object Repository/Page_Evermos/input_dress_appHeading__search__input'), 'dress')
+
+WebUI.verifyElementPresent(findTestObject('Object Repository/Page_Evermos/span_DressGamis'), 0)
+
+WebUI.verifyElementPresent(findTestObject('Object Repository/Page_Evermos/span_TAG'), 0)
+
+WebUI.verifyElementPresent(findTestObject('Object Repository/Page_Evermos/span_Aiko - Dress Maudy'), 0)
+
+WebUI.click(findTestObject('Object Repository/Page_Evermos/span_DressGamis'))
+
+WebUI.click(findTestObject('Object Repository/Page_Evermos/img_Baju Tidur Wanita_productCard__image'))
+
+WebUI.verifyElementPresent(findTestObject('Object Repository/Page_Evermos/div_Tosca Maroon White Black Navy'), 0)
+
+WebUI.click(findTestObject('Object Repository/Page_Evermos/span_Beli Sekarang'))
+
+WebUI.click(findTestObject('Object Repository/Page_Evermos/input_Initial Address_pickedAddressId'))
+
+WebUI.click(findTestObject('Object Repository/Page_Evermos/button_Pilih Alamat'))
+
+WebUI.verifyElementPresent(findTestObject('Object Repository/Page_Evermos/button_Lanjut Belanja'), 4)
+
+WebUI.click(findTestObject('Object Repository/Page_Evermos/button_Lanjut Belanja'))
+
+WebUI.verifyElementPresent(findTestObject('Object Repository/Page_Evermos/a_Fashion Wanita_appLayoutHeading__button'), 3)
+
+WebUI.click(findTestObject('Object Repository/Page_Evermos/a_Fashion Wanita_appLayoutHeading__button'))
+
+WebUI.click(findTestObject('Object Repository/Page_Evermos/a_dress'))
+
+WebUI.click(findTestObject('Object Repository/Page_Evermos/img_Bagikan Produk_productCard__image'))
+
+WebUI.click(findTestObject('Object Repository/Page_Evermos/span'))
+
+WebUI.click(findTestObject('Object Repository/Page_Evermos/span_dress'))
+
+WebUI.click(findTestObject('Object Repository/Page_Evermos/a_BATAL'))
+
+WebUI.click(findTestObject('Object Repository/Page_Evermos/span_dress'))
+
+WebUI.click(findTestObject('Object Repository/Page_Evermos/a_BATAL'))
+
+WebUI.click(findTestObject('Object Repository/Page_Evermos/a_dress_appLayoutHeading__button'))
+
+WebUI.click(findTestObject('Object Repository/Page_Evermos/a_BATAL'))
+
+WebUI.click(findTestObject('Object Repository/Page_Evermos/span_1'))
+
+WebUI.click(findTestObject('Object Repository/Page_Evermos/a_BATAL'))
+
+WebUI.verifyElementPresent(findTestObject('Object Repository/Page_Evermos/span_dress'), 0)
+
+WebUI.click(findTestObject('Object Repository/Page_Evermos/span_1'))
+
+WebUI.click(findTestObject('Object Repository/Page_Evermos/a_BATAL'))
+
+WebUI.click(findTestObject('Object Repository/Page_Evermos/span_Urutkan'))
+
+WebUI.click(findTestObject('Object Repository/Page_Evermos/span_Harga Tertinggi'))
+
+WebUI.click(findTestObject('Object Repository/Page_Evermos/button_SIMPAN'))
+
+WebUI.verifyElementPresent(findTestObject('Object Repository/Page_Evermos/img_Filter_productCard__image'), 0)
+
+WebUI.click(findTestObject('Object Repository/Page_Evermos/span'))
+
+WebUI.click(findTestObject('Object Repository/Page_Evermos/span_Filter'))
+
+WebUI.click(findTestObject('Object Repository/Page_Evermos/span_Produk di Toko Saya_inputCheck__icon i_c91890'))
+
+WebUI.setText(findTestObject('Object Repository/Page_Evermos - Katalog/input_Rp_inputText__input_1'), '25.000.000')
+
+WebUI.setText(findTestObject('Object Repository/Page_Evermos - Katalog/input_Rp_inputText__input'), '360.000')
+
+WebUI.click(findTestObject('Object Repository/Page_Evermos - Katalog/span_Urutan Harga_inputCheck__icon inputChe_476551'))
+
+WebUI.click(findTestObject('Object Repository/Page_Evermos - Katalog/button_Terapkan'))
+
